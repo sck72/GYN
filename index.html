@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8">
   <title>Dr. Michelle Lafornara, MD | Menopause & Women's Health, Brookline MA</title>
-  <script>
-    // Redirect to the raw file which displays properly
-    window.location.href = 'https://raw.githubusercontent.com/sck72/GYN/main/index.html';
-  </script>
 </head>
 <body>
-  <p>Loading...</p>
+  <iframe id="content" style="border: none; width: 100%; height: 100vh; margin: 0; padding: 0;" src="https://raw.githubusercontent.com/sck72/GYN/main/index.html"></iframe>
+  <script>
+    // Fallback: if iframe fails, redirect
+    document.getElementById('content').onerror = function() {
+      window.location.href = 'https://raw.githubusercontent.com/sck72/GYN/main/index.html';
+    };
+  </script>
 </body>
 </html>
